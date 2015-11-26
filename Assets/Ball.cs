@@ -13,6 +13,11 @@ public class Ball : MonoBehaviour {
 	void Update () {
         float distance;
         distance = transform.position.z - startingPoint;
-	
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GetComponent<Rigidbody>().AddForce(Vector3.up*300);
+        }
+        
 	}
 }
