@@ -18,6 +18,10 @@ public class Ball : MonoBehaviour {
         {
             GetComponent<Rigidbody>().AddForce(Vector3.up*300);
         }
-        
-	}
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GetComponent<Rigidbody>().AddForce(Vector3.up * 300);
+        }
+
+    }
 }
