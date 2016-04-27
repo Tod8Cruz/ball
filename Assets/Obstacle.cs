@@ -10,7 +10,7 @@ public class Obstacle : MonoBehaviour {
     }
     
 
-    float delta = 0f;
+    float delta = -0.1f;
 	// Use this for initialization
 	void Start () {
         
