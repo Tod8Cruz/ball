@@ -2,15 +2,15 @@
 using System.Collections;
 
 public class Obstacle : MonoBehaviour {
-
-    void TestMethod(string name,int a)
+    void OnCollisionEnter(Collision collision)
     {
-        float distance = Vector3.Distance(GameObject.Find(name).transform.position,
-            transform.position);
-        Debug.Log(name+"까지 거리: "+distance);
+        Vector3 direction = transform.position - collision.gameObject.transform.position;
+        direction = direction.normalized * 1000;
+        collision.gameObject.GetComponent<Rigidbody>().AddForce(direction);
     }
+    
 
-    float delta = -0.1f;
+    float delta = 0f;
 	// Use this for initialization
 	void Start () {
         
@@ -18,7 +18,7 @@ public class Obstacle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        TestMethod("Ground",0);
+       
         float newXPosition = transform.localPosition.x + delta;
         transform.localPosition = new Vector3(newXPosition,
             transform.localPosition.y,
