@@ -7,7 +7,7 @@ public class FailZone : MonoBehaviour {
     {
         if(collider.gameObject.name == "Ball")
         {
-            Application.LoadLevel("Game");
+            GameObject.Find("GameManager").SendMessage("RestartGame");
         }
     }
 
