@@ -2,6 +2,14 @@
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
+    int coinCount = 0;
+    void GetCoin()
+    {
+        //coinCount += coinCount + 1
+        coinCount++;
+
+        Debug.Log("동전: " + coinCount);
+    }
 
     void RestartGame()
     {

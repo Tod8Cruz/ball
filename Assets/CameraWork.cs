@@ -7,13 +7,6 @@ public class CameraWork : MonoBehaviour {
 	void Start () {
         ball = GameObject.Find("Ball");
 
-        GameObject[] coins = GameObject.FindGameObjectsWithTag("Coin");
-        
-
-        for(int i = 0;i < coins.Length; i++)
-        {
-            Debug.Log(coins[i].name);
-        }
 
 
         
